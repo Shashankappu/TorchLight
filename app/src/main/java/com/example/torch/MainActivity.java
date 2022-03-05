@@ -50,9 +50,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    public void switchTorch(boolean status){
+    public void switchTorch(boolean isTorchOn){
         try {
-            cameraManager.setTorchMode(CameraId,status);
-        }catch (Exception e){}
+            cameraManager.setTorchMode(CameraId,isTorchOn);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
